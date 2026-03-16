@@ -7,27 +7,16 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation Menu -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">Interview Panel Guide</div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#" onclick="showHome()">Home</a></li>
-                <li><a href="#" class="panel-link" onclick="showPanel('tim-forber')">Tim Forber</a></li>
-                <li><a href="#" class="panel-link" onclick="showPanel('jonathan-dyson')">Jonathan Dyson</a></li>
-                <li><a href="#" class="panel-link" onclick="showPanel('lisa-stitt')">Lisa Stitt</a></li>
-                <li><a href="#" class="panel-link" onclick="showPanel('ben-moseley')">Ben Moseley</a></li>
-                <li><a href="#" class="panel-link" onclick="showPanel('ben-illsley')">Ben Illsley</a></li>
-                <li><a href="#" class="panel-link" onclick="showPanel('paul-guy')">Paul Guy</a></li>
-            </ul>
-        </div>
-    </nav>
-
     <!-- Main Content -->
     <main class="container">
         <!-- Home Page -->
         <section id="home-page" class="page active">
             <p class="byline">Prepared by Richard Priest</p>
+            <div class="qr-code-container">
+                <a href="https://richardpriest19.github.io/NYP-NYFRS/" target="_blank" title="View interview portfolio">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://richardpriest19.github.io/NYP-NYFRS/" alt="QR code to interview portfolio" class="qr-code">
+                </a>
+            </div>
             <div class="home-grid">
                 <div class="panel-card" onclick="showPanel('tim-forber')">
                     <h3>Tim Forber</h3>
