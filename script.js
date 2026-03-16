@@ -31,32 +31,6 @@ function printPage() {
     window.print();
 }
 
-// Export as PDF functionality
-function exportPDF() {
-    // Get the current page content
-    const currentPage = document.querySelector('.page.active');
-    const pageTitle = currentPage.querySelector('h2')?.textContent || 'Interview Panel Guide';
-    
-    // Create a temporary container with printable content
-    const element = currentPage.cloneNode(true);
-    
-    // Remove buttons from cloned element
-    const buttons = element.querySelectorAll('.btn-top, .btn-home');
-    buttons.forEach(btn => btn.remove());
-    
-    // PDF options
-    const options = {
-        margin: 10,
-        filename: `${pageTitle.replace(/\s+/g, '_')}.pdf`,
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2 },
-        jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
-    };
-    
-    // Generate PDF
-    html2pdf().set(options).from(element).save();
-}
-
 // Scroll to top of page
 function scrollToTop() {
     window.scrollTo({

@@ -140,6 +140,14 @@ body {
     font-weight: 400;
 }
 
+.byline {
+    text-align: center;
+    font-size: 0.85em;
+    color: #90a4ae;
+    margin-bottom: 28px;
+    font-weight: 400;
+}
+
 .home-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -323,6 +331,61 @@ body {
     font-weight: 600;
 }
 
+/* Concern Tags */
+.concern-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px 0 14px 0;
+}
+
+.tag {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 14px;
+    font-size: 0.7em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.tag-strategic {
+    background: linear-gradient(135deg, rgba(13, 157, 157, 0.18) 0%, rgba(13, 157, 157, 0.08) 100%);
+    color: #0a7d7d;
+    border: 1px solid rgba(13, 157, 157, 0.35);
+}
+
+.tag-operational {
+    background: linear-gradient(135deg, rgba(45, 90, 123, 0.18) 0%, rgba(45, 90, 123, 0.08) 100%);
+    color: #1a3a52;
+    border: 1px solid rgba(45, 90, 123, 0.35);
+}
+
+.tag-technical {
+    background: linear-gradient(135deg, rgba(100, 120, 140, 0.18) 0%, rgba(100, 120, 140, 0.08) 100%);
+    color: #445a6f;
+    border: 1px solid rgba(100, 120, 140, 0.35);
+}
+
+.tag-cost {
+    background: linear-gradient(135deg, rgba(211, 47, 47, 0.18) 0%, rgba(211, 47, 47, 0.08) 100%);
+    color: #b71c1c;
+    border: 1px solid rgba(211, 47, 47, 0.35);
+}
+
+.tag-risk {
+    background: linear-gradient(135deg, rgba(230, 124, 115, 0.18) 0%, rgba(230, 124, 115, 0.08) 100%);
+    color: #c62828;
+    border: 1px solid rgba(230, 124, 115, 0.35);
+}
+
+.tag-cultural {
+    background: linear-gradient(135deg, rgba(156, 39, 176, 0.18) 0%, rgba(156, 39, 176, 0.08) 100%);
+    color: #6a1b9a;
+    border: 1px solid rgba(156, 39, 176, 0.35);
+}
+
 /* Page Navigation Buttons */
 .page-buttons {
     position: fixed;
@@ -424,15 +487,6 @@ body {
     box-shadow: 0 6px 16px rgba(45, 90, 123, 0.32);
 }
 
-.pdf-btn {
-    background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
-}
-
-.pdf-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(211, 47, 47, 0.32);
-}
-
 @media (max-width: 768px) {
     .floating-export-buttons {
         bottom: 85px;
@@ -448,6 +502,23 @@ body {
         width: 18px;
         height: 18px;
     }
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(180deg, #f5f7fa 0%, #eef0f5 100%);
+    border-top: 1px solid #d8dce4;
+    padding: 40px 24px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.footer p {
+    color: #90a4ae;
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 400;
 }
 
 /* Print Styles */
@@ -748,6 +819,11 @@ body {
         margin-bottom: 32px;
     }
 
+    .byline {
+        font-size: 0.8em;
+        margin-bottom: 20px;
+    }
+
     .panel-card {
         padding: 22px 18px;
     }
@@ -774,10 +850,25 @@ body {
         font-size: 0.95em;
     }
 
+    .tag {
+        font-size: 0.65em;
+        padding: 3px 8px;
+    }
+
     .btn-top,
     .btn-home {
         padding: 11px 22px;
         font-size: 0.9em;
         margin-top: 20px;
+    }
+
+    .footer {
+        padding: 28px 18px;
+        margin-top: 40px;
+    }
+
+    .footer p {
+        font-size: 0.85em;
+        margin: 0;
     }
 }
