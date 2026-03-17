@@ -12,38 +12,43 @@
         <!-- Home Page -->
         <section id="home-page" class="page active">
             <p class="byline">Prepared by Richard Priest</p>
-            <div class="qr-code-container">
-                <a href="https://richardpriest19.github.io/NYP-NYFRS/" target="_blank" title="View interview portfolio">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://richardpriest19.github.io/NYP-NYFRS/" alt="QR code to interview portfolio" class="qr-code">
-                </a>
+            <div class="qr-statement-wrapper">
+                <div class="qr-code-container">
+                    <a href="https://richardpriest19.github.io/NYP-NYFRS/" target="_blank" title="View interview portfolio">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://richardpriest19.github.io/NYP-NYFRS/" alt="QR code to interview portfolio" class="qr-code">
+                    </a>
+                </div>
+                <div class="qr-statement">
+                    <p>I recognise my background is commercial, not policing. But I've been studying what modern policing demands from ICT—and it's fundamentally about enabling fast, accurate decision-making in high-stakes situations.</p>
+                </div>
             </div>
             <div class="home-grid">
-                <div class="panel-card" onclick="showPanel('tim-forber')">
+                <div class="panel-card" data-panel-id="tim-forber" onclick="showPanel('tim-forber')">
                     <h3>Tim Forber</h3>
                     <p class="job-title">Chief Constable, North Yorkshire Police</p>
                     <p class="view-link">View profile</p>
                 </div>
-                <div class="panel-card" onclick="showPanel('jonathan-dyson')">
+                <div class="panel-card" data-panel-id="jonathan-dyson" onclick="showPanel('jonathan-dyson')">
                     <h3>Jonathan Dyson</h3>
                     <p class="job-title">Chief Fire Officer, North Yorkshire Fire and Rescue Service</p>
                     <p class="view-link">View profile</p>
                 </div>
-                <div class="panel-card" onclick="showPanel('lisa-stitt')">
+                <div class="panel-card" data-panel-id="lisa-stitt" onclick="showPanel('lisa-stitt')">
                     <h3>Lisa Stitt</h3>
                     <p class="job-title">Assistant Chief Officer, EnableNY</p>
                     <p class="view-link">View profile</p>
                 </div>
-                <div class="panel-card" onclick="showPanel('ben-moseley')">
+                <div class="panel-card" data-panel-id="ben-moseley" onclick="showPanel('ben-moseley')">
                     <h3>Ben Moseley</h3>
                     <p class="job-title">Assistant Chief Constable, Crime & Specialist Operations</p>
                     <p class="view-link">View profile</p>
                 </div>
-                <div class="panel-card" onclick="showPanel('ben-illsley')">
+                <div class="panel-card" data-panel-id="ben-illsley" onclick="showPanel('ben-illsley')">
                     <h3>Ben Illsley</h3>
                     <p class="job-title">Director of Emergency Response & Training, North Yorkshire Fire and Rescue Service</p>
                     <p class="view-link">View profile</p>
                 </div>
-                <div class="panel-card" onclick="showPanel('paul-guy')">
+                <div class="panel-card" data-panel-id="paul-guy" onclick="showPanel('paul-guy')">
                     <h3>Paul Guy</h3>
                     <p class="job-title">Director of ICT, Durham Constabulary & NPCE Platform Asset Owner</p>
                     <p class="view-link">View profile</p>

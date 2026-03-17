@@ -44,6 +44,67 @@ document.addEventListener('DOMContentLoaded', function() {
     // Show home page by default
     showHome();
     
+    // Add event listeners to all panel cards for better touch support
+    const panelCards = document.querySelectorAll('.panel-card');
+    panelCards.forEach(card => {
+        const panelId = card.getAttribute('data-panel-id');
+        if (panelId) {
+            card.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                showPanel(panelId);
+            });
+            card.addEventListener('touchend', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                showPanel(panelId);
+            });
+        }
+    });
+    
+    // Add event listeners to all buttons
+    const homeButtons = document.querySelectorAll('.btn-home');
+    homeButtons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            showHome();
+        });
+        btn.addEventListener('touchend', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            showHome();
+        });
+    });
+    
+    const topButtons = document.querySelectorAll('.btn-top');
+    topButtons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            scrollToTop();
+        });
+        btn.addEventListener('touchend', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            scrollToTop();
+        });
+    });
+    
+    const printButtons = document.querySelectorAll('.print-btn');
+    printButtons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            printPage();
+        });
+        btn.addEventListener('touchend', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            printPage();
+        });
+    });
+    
     // Prevent default link behaviour for navigation
     const links = document.querySelectorAll('a[onclick*="show"]');
     links.forEach(link => {
