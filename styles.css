@@ -158,7 +158,7 @@ body {
 
 .panel-card {
     background: var(--secondary-blue);
-    padding: 28px 20px 22px;
+    padding: 20px 16px 16px;
     border-radius: 6px;
     text-align: center;
     cursor: pointer;
@@ -189,16 +189,16 @@ body {
 
 /* Card icon */
 .card-icon {
-    width: 44px;
-    height: 44px;
-    margin: 0 auto 14px;
+    width: 36px;
+    height: 36px;
+    margin: 0 auto 10px;
     opacity: 0.85;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .card-icon svg {
-    width: 44px;
-    height: 44px;
+    width: 36px;
+    height: 36px;
 }
 
 .panel-card:not(.panel-card--inactive):hover .card-icon {
@@ -868,12 +868,12 @@ body {
 
     .home-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 14px;
-        margin-top: 32px;
+        gap: 10px;
+        margin-top: 24px;
     }
 
     .panel-card {
-        padding: 22px 16px 18px;
+        padding: 14px 12px 12px;
     }
 
     .concern-section {
@@ -939,13 +939,64 @@ body {
         line-height: 1.6;
     }
 
+    /* Single column — full-width cards, impossible to mis-tap */
+    .home-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 20px;
+    }
+
+    /* Horizontal card layout on phone: icon left, text right */
     .panel-card {
-        padding: 18px 14px 14px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 14px 16px;
+        text-align: left;
+        min-height: 64px;
+    }
+
+    .panel-card .card-icon {
+        flex-shrink: 0;
+        margin: 0;
+        width: 30px;
+        height: 30px;
+    }
+
+    .panel-card .card-icon svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .panel-card-text {
+        flex: 1;
+        min-width: 0;
     }
 
     .panel-card h3 {
-        font-size: 1.15em;
-        margin-bottom: 10px;
+        font-size: 0.95em;
+        margin-bottom: 2px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .panel-card .job-title {
+        font-size: 0.78em;
+        margin-bottom: 0;
+        line-height: 1.4;
+        white-space: normal;
+    }
+
+    .panel-card .view-link {
+        display: none;
+    }
+
+    /* Ghost number stays but smaller */
+    .ghost-number {
+        font-size: 3.5em;
+        top: -6px;
+        right: 4px;
     }
 
     .page h2 {
